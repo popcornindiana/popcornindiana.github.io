@@ -2,18 +2,21 @@
 title: The Red Bag
 timezone: EST
 collections:
-  questions:
-    title: Questions
-    output: false
   intro:
     title: Intro
     output: false
-  conclusion:
-    title: conclusion
+  posts:
+    title: Posts
+    output: true
+  questions:
+    title: Questions
     output: false
   uploads:
     title: Uploads
     output: true
+  conclusion:
+    title: conclusion
+    output: false
 email: aiden@thewanderingsocialites.com
 description: What's in The Red Bag
 baseurl: ''
