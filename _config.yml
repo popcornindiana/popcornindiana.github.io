@@ -1,6 +1,11 @@
 ---
-title: Popcornindiana.Github.Io
-timezone: UTC
+title: The Red Bag
+email: aiden@thewanderingsocialites.com
+description: What's in The Red Bag
+timezone: EST
+baseurl: ""
+url: "http://theredbag.us"
+github_username: popcornindiana
 collections:
   posts:
     title: Posts
@@ -8,3 +13,5 @@ collections:
   uploads:
     title: Uploads
     output: true
+  landing:
+    title: Landing

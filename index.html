@@ -4,5 +4,7 @@ layout: default
 ---
 
 <section class="home">
-  Hello World!
+  {% for landing in site.landing %}
+    {{ landing.foo }}
+  {% endfor %}
 </section>
