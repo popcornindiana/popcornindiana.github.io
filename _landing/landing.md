@@ -1,5 +1,5 @@
 ---
 title: Landing
-foo: bar
+foo: foobar
 ---
 
