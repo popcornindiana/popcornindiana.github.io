@@ -2,12 +2,15 @@
 title: The Red Bag
 timezone: EST
 collections:
-  landing:
-    title: Landing
+  questions:
+    title: Questions
     output: false
-  posts:
-    title: Posts
-    output: true
+  intro:
+    title: Intro
+    output: false
+  conclusion:
+    title: conclusion
+    output: false
   uploads:
     title: Uploads
     output: true
