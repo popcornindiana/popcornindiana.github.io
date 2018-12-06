@@ -3,8 +3,15 @@ title: Home
 layout: default
 ---
 
-<section class="home">
-  {% for landing in site.landing %}
-    {{ landing.foo }}
+<section class="question__wrapper">
+  {% for question in site.questions %}
+  <div class="question__block">
+    <h2 class="question__question">
+      {{ question.question }}
+    </h2>
+    <p class="question__answer">
+      {{ question.answer }}
+    </p>
+  </div>
   {% endfor %}
 </section>
