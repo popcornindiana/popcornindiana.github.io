@@ -1,17 +1,18 @@
 ---
 title: The Red Bag
-email: aiden@thewanderingsocialites.com
-description: What's in The Red Bag
 timezone: EST
-baseurl: ""
-url: "http://theredbag.us"
-github_username: popcornindiana
 collections:
+  landing:
+    title: Landing
+    output: false
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
     output: true
-  landing:
-    title: Landing
+email: aiden@thewanderingsocialites.com
+description: What's in The Red Bag
+baseurl: ''
+url: http://theredbag.us
+github_username: popcornindiana
