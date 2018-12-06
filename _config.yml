@@ -17,6 +17,8 @@ collections:
   conclusion:
     title: conclusion
     output: false
+sass:
+  style: compressed
 tagline: Popcorn Indiana
 email: aiden@thewanderingsocialites.com
 description: What's in The Red Bag
