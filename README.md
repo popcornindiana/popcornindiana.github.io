@@ -1,6 +1,6 @@
 # theredbag.us
 The Red Bag landing page.\
-Built with Siteleaf.\
+Built with Siteleaf.
 
 ## Setup
 install and run bundler\
