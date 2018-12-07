@@ -41,7 +41,7 @@ function scrollImg(pos, counter) {
   if ( num < 1 || num > 25 || isNaN(num) ) {
     num = 1;
   }
-  if ( num > 24 && counter < 2) {
+  if ( num > 24 && counter < 1) {
     $('.popup__overlay').first().css('display', 'block');
     $('.popup').first().css('display', 'block');
   }
