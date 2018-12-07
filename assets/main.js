@@ -4,7 +4,6 @@
 $( window ).on('load', resizeMasthead);
 $( window ).on('resize', resizeMasthead);
 
-var offset;
 var docHeight;
 var num = 1;
 
@@ -16,7 +15,6 @@ function resizeMasthead() {
   var width = $('.masthead').width() - $('.masthead__img').width();
   $('.masthead__img').css('left', width/2)
 
-  offset = $('.masthead').height();
   docHeight = $('.wrapper').height()
 }
 
@@ -40,7 +38,7 @@ function scrollImg(pos) {
   var src = $('.pop__img').first().prop('src')
 
   num = Math.ceil(pos / (docHeight / 25));
-  if ( num < 1 || num > 25) {
+  if ( num < 1 || num > 25 || isNaN(num) ) {
     num = 1;
   }
   var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';

@@ -12,3 +12,13 @@ $gap: $gutter*6;
 // color
 $red: #9b1f20;
 $white: #ffffff;
+
+// breakpoints
+@mixin breakpoint($point) {
+  @if $point == medium {
+    @media (max-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 600px)  { @content; }
+  }
+}

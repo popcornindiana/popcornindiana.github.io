@@ -14,8 +14,6 @@
             The<br>Red<br>Bag
           </a>
         </h1>
-        <img class="masthead__img masthead__img--covered" id="masthead__img--covered" src="{{ site.baseurl }}assets/img/redBag_covered.png"></img>
-        <img class="masthead__img masthead__img--branded" id="masthead__img--branded" src="{{ site.baseurl }}assets/img/redBag_branded.png"></img>
         <div class="masthead__details" id="masthead__details">
           {% for detail in site.conclusion %}
             <p>
@@ -25,6 +23,8 @@
             </p>
           {% endfor %}
         </div>
+        <img class="masthead__img masthead__img--covered" id="masthead__img--covered" src="{{ site.baseurl }}assets/img/redBag_covered.png"></img>
+        <img class="masthead__img masthead__img--branded" id="masthead__img--branded" src="{{ site.baseurl }}assets/img/redBag_branded.png"></img>
       </header>
 
       {{ content }}

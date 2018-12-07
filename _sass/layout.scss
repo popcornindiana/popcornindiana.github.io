@@ -10,6 +10,8 @@
   margin: 0 auto;
   height: 100%;
   line-height: 0;
+
+  @include breakpoint(small) {   padding: 0 $gutter; }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -22,10 +24,13 @@
   margin: $tripleGutter 0;
   display: block;
   position: relative;
+  z-index: 500;
 
   -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
   box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+
+  @include breakpoint(small) { margin-top: $gutter; }
 }
 
 .masthead__title {
@@ -39,6 +44,13 @@
   width: auto;
   position: absolute;
   z-index: 999;
+
+  @include breakpoint(small) {
+    width: 100% !important;
+    height: auto !important;
+    bottom: -$tripleGutter;
+    top: auto;
+ }
 }
 
 .masthead__details {
@@ -47,6 +59,17 @@
     bottom: 0;
     margin: $gutter;
     color: $white;
+    @include breakpoint(small) {
+      position: relative;
+      margin: 0 $gutter;
+      p {
+        display: inline-block;
+        padding-right: $halfGutter;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -89,6 +112,7 @@
   width: 42%;
   display: block;
   float: left;
+  @include breakpoint(small) { width: 100%; }
 }
 
 .divider {
