@@ -31,8 +31,18 @@ function toggleVisible(visible) {
   }
 }
 
-function elementInView(elem){
+function elementInView(elem) {
   return $(window).scrollTop() < $(elem).offset().top + $(elem).height() ;
+}
+
+function scrollImg(pos) {
+  var num = Math.ceil(pos / (docHeight / 20));
+  var src = $('.pop__img').first().prop('src')
+  if ( num < 1 || num > 20) {
+    num = 1;
+  }
+  var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';
+  $('.pop__img').attr('src', newSrc);
 }
 
 $('document').ready(function() {
@@ -45,6 +55,7 @@ $('document').ready(function() {
 
     $(document).scroll(function(){
       var scrollWindowPos = $(document).scrollTop();
+      scrollImg(scrollWindowPos);
       if(scrollWindowPos >= docHeight + 90) {
         $(document).scrollTop(0);
         counter += 1;
