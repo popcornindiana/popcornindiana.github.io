@@ -6,6 +6,7 @@ $( window ).on('resize', resizeMasthead);
 
 var offset;
 var docHeight;
+var num = 1;
 
 function resizeMasthead() {
   var height = $( window ).height()
@@ -36,7 +37,6 @@ function elementInView(elem) {
 }
 
 function scrollImg(pos) {
-  var num = 1;
   var src = $('.pop__img').first().prop('src')
 
   num = Math.ceil(pos / (docHeight / 25));
