@@ -45,7 +45,7 @@
   position: absolute;
   z-index: 999;
 
-  @include breakpoint(small) {
+  @include breakpoint(medium) {
     width: 100% !important;
     height: auto !important;
     bottom: -$tripleGutter;
@@ -59,7 +59,7 @@
     bottom: 0;
     margin: $gutter;
     color: $white;
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
       position: relative;
       margin: 0 $gutter;
       p {

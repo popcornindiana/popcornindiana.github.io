@@ -16,9 +16,9 @@ $white: #ffffff;
 // breakpoints
 @mixin breakpoint($point) {
   @if $point == medium {
-    @media (max-width: 50em) { @content; }
+    @media (max-width: 900px) { @content; }
   }
   @else if $point == small {
-    @media (max-width: 600px)  { @content; }
+    @media (max-width: 400px)  { @content; }
   }
 }
