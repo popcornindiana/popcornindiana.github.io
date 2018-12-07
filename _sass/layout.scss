@@ -17,10 +17,15 @@
 
 .masthead {
   background-color: $red;
+  border-radius: 5px;
   height: 500px;
   margin: $tripleGutter 0;
   display: block;
   position: relative;
+
+  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
 }
 
 .masthead__title {
@@ -48,11 +53,14 @@
 // Pop Images
 .pop__img {
   position: fixed;
-  width: 10%;
-  left: 45%;
+  width: 20%;
+  left: 40%;
   top: 40%;
   height: auto;
   z-index: 0;
+
+  -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.15));
+  filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.15));
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -61,6 +69,7 @@
 .question__wrapper {
   float: left;
   color: $red;
+  z-index: 999;
 }
 
 .question__block {

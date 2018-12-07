@@ -36,9 +36,11 @@ function elementInView(elem) {
 }
 
 function scrollImg(pos) {
-  var num = Math.ceil(pos / (docHeight / 20));
+  var num = 1;
   var src = $('.pop__img').first().prop('src')
-  if ( num < 1 || num > 20) {
+
+  num = Math.ceil(pos / (docHeight / 25));
+  if ( num < 1 || num > 25) {
     num = 1;
   }
   var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';
