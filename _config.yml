@@ -1,6 +1,6 @@
 ---
 title: The Red Bag
-timezone: EST
+timezone: Pacific/Pago_Pago
 collections:
   intro:
     title: Intro
@@ -23,6 +23,6 @@ parentsite: http://www.popcornindiana.com/
 tagline: Popcorn Indiana
 email: aiden@thewanderingsocialites.com
 description: What's in The Red Bag
-baseurl: ''
+baseurl: 
 url: http://theredbag.us
 github_username: popcornindiana
