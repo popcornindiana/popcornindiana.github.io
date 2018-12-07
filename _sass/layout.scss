@@ -20,7 +20,6 @@
 .masthead {
   background-color: $red;
   border-radius: 5px;
-  height: 500px;
   margin: $tripleGutter 0;
   display: block;
   position: relative;
@@ -70,10 +69,14 @@
         }
       }
    }
+   @include breakpoint(small) {
+     display: none;
+   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // Pop Images
+
 .pop__img {
   position: fixed;
   width: 20%;
@@ -84,6 +87,50 @@
 
   -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.15));
   filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.15));
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Popup
+
+.popup {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  padding: $gutter;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 5px;
+  color: $red;
+  z-index: 999;
+  display: none;
+
+  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+}
+
+.popup__overlay {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.15);
+  z-index: 999;
+  display: none;
+}
+
+input {
+  font-size: 1rem;
+  width: 100%;
+  padding: $halfGutter;
+  border-radius: 5px;
+  font-family: 'Work Sans', sans-serif;
+
+  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -98,7 +145,7 @@
 .question__block {
   width: 100%;
   display: block;
-  margin: $gap 0;
+  margin: $gap 0 0 0;
   position: relative;
   float: left;
   &:nth-child(even) {
@@ -113,6 +160,16 @@
   display: block;
   float: left;
   @include breakpoint(small) { width: 100%; }
+}
+
+.question__logos {
+  img {
+    height: auto;
+    width: 20%;
+    display: inline-block;
+    padding-right: $gutter;
+    padding: $doubleGutter 0 $gap 0;
+  }
 }
 
 .divider {

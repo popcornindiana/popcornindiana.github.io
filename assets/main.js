@@ -8,7 +8,7 @@ var docHeight;
 var num = 1;
 
 function resizeMasthead() {
-  var height = $( window ).height()
+  var height = $( window ).height();
   $('.masthead').height(height - 180);
   $('.masthead__img').height(height - 120);
 
@@ -34,12 +34,16 @@ function elementInView(elem) {
   return $(window).scrollTop() < $(elem).offset().top + $(elem).height() ;
 }
 
-function scrollImg(pos) {
+function scrollImg(pos, counter) {
   var src = $('.pop__img').first().prop('src')
 
   num = Math.ceil(pos / (docHeight / 25));
   if ( num < 1 || num > 25 || isNaN(num) ) {
     num = 1;
+  }
+  if ( num > 24 && counter < 2) {
+    $('.popup__overlay').first().css('display', 'block');
+    $('.popup').first().css('display', 'block');
   }
   var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';
   $('.pop__img').attr('src', newSrc);
@@ -49,26 +53,27 @@ $('document').ready(function() {
     var clone=$("body").contents().clone();
     clone.appendTo("body");
 
-    var inView = true;
     var counter = 0;
     toggleVisible(false);
 
     $(document).scroll(function(){
       var scrollWindowPos = $(document).scrollTop();
-      scrollImg(scrollWindowPos);
+      scrollImg(scrollWindowPos, counter);
       if(scrollWindowPos >= docHeight + 90) {
         $(document).scrollTop(0);
         counter += 1;
       }
-      if(elementInView($('.masthead').first())) {
-        inView = true;
-      } else {
-        inView = false;
+      if(!elementInView($('.masthead').first())) {
         if (counter%2 == 0) {
-          toggleVisible(true)
-        } else {
           toggleVisible(false)
+        } else {
+          toggleVisible(true)
         }
       }
+    });
+
+    $('.popup__overlay').first().click(function() {
+      $('.popup__overlay').first().css('display', 'none')
+      $('.popup').first().css('display', 'none');
     });
 });
