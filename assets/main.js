@@ -43,7 +43,7 @@ function scrollImg(pos) {
   if ( num < 1 || num > 25) {
     num = 1;
   }
-  var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.PNG';
+  var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';
   $('.pop__img').attr('src', newSrc);
 }
 
