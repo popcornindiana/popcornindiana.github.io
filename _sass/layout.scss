@@ -28,6 +28,14 @@
   color: $white;
 }
 
+.masthead__img {
+  left: 15%;
+  top: $gutter;
+  width: auto;
+  position: absolute;
+  z-index: 999;
+}
+
 .masthead__details {
     position: absolute;
     right: 0;
