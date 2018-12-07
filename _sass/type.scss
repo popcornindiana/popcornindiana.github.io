@@ -2,20 +2,21 @@
 //
 // Headings, body text, lists, and other misc typographic elements.
 
-// Headings
+@import 'units';
+
 h1, h2 {
   font-family: 'Rubik Mono One', sans-serif;
   font-weight: 400;
-  color: #313131;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: .8;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1;
+  margin-bottom: $gutter;
 }
 
 // Links
@@ -26,6 +27,7 @@ a {
 
 // Body text
 p {
+  font-size: 1rem;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   margin-top: 0;
