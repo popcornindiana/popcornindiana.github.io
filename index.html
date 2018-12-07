@@ -6,12 +6,14 @@ layout: default
 <section class="question__wrapper">
   {% for question in site.questions %}
   <div class="question__block">
-    <h2 class="question__question">
-      {{ question.question }}
-    </h2>
-    <p class="question__answer">
-      {{ question.answer }}
-    </p>
+    <div class="question__inner">
+      <h2 class="question__question">
+        {{ question.question }}
+      </h2>
+      <p class="question__answer">
+        {{ question.answer }}
+      </p>
+    </div>
   </div>
   {% endfor %}
 </section>

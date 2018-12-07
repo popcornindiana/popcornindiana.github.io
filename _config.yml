@@ -19,6 +19,7 @@ collections:
     output: false
 sass:
   style: compressed
+parentsite: "http://www.popcornindiana.com/"
 tagline: Popcorn Indiana
 email: aiden@thewanderingsocialites.com
 description: What's in The Red Bag

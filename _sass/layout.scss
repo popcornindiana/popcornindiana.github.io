@@ -2,14 +2,68 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
-.container {
-  max-width: 38rem;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
-  margin-left:  auto;
-  margin-right: auto;
+@import 'units';
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 $tripleGutter;
+  margin: 0 auto;
+  height: 100%;
+  line-height: 0;
 }
 
-footer {
-  margin-bottom: 2rem;
+////////////////////////////////////////////////////////////////////////////////
+// Masthead
+
+.masthead {
+  background-color: $red;
+  height: 500px;
+  margin: $tripleGutter 0;
+  display: block;
+  position: relative;
+}
+
+.masthead__title {
+  padding: $gutter;
+  color: $white;
+}
+
+.masthead__details {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: $gutter;
+    color: $white;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Questions
+
+.question__wrapper {
+  float: left;
+}
+
+.question__block {
+  width: 100%;
+  display: block;
+  margin: $gap 0;
+  position: relative;
+  float: left;
+  &:nth-child(even) {
+    .question__inner {
+      float: right;
+    }
+  }
+}
+
+.question__inner {
+  width: 42%;
+  display: block;
+  float: left;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 2px;
 }

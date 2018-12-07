@@ -1,0 +1,4 @@
+---
+name: Credits
+link: "foo"
+---
