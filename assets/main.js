@@ -65,9 +65,9 @@ $('document').ready(function() {
       }
       if(!elementInView($('.masthead').first())) {
         if (counter%2 == 0) {
-          toggleVisible(false)
-        } else {
           toggleVisible(true)
+        } else {
+          toggleVisible(false)
         }
       }
     });
