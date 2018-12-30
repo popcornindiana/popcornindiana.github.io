@@ -29,11 +29,9 @@
         </h1>
         <div class="masthead__details" id="masthead__details">
           {% for detail in site.conclusion %}
-            <p>
-              <a target="_blank" href="{{ detail.link }}">
-                {{ detail.name }}
-              </a>
-            </p>
+            <a target="_blank" href="{{ detail.link }}">
+              {{ detail.name }}
+            </a>
           {% endfor %}
         </div>
         <img class="masthead__img masthead__img--covered" id="masthead__img--covered" src="{{ site.baseurl }}assets/img/redBag_covered.png"></img>
