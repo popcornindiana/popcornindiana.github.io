@@ -57,6 +57,9 @@
     color: $white;
     p {
       font-size: .75rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     @include breakpoint(medium) {
       position: relative;
@@ -64,9 +67,6 @@
       p {
         display: inline-block;
         padding-right: $halfGutter;
-        &:hover {
-          text-decoration: underline;
-        }
       }
    }
    @include breakpoint(small) {
