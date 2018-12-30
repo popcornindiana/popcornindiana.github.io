@@ -1,6 +1,6 @@
 ---
 title: Detail4
-name: Credits
-link: foo
+name: Footage from Carbon 12
+link: https://www.youtube.com/watch?v=DDigjlBlSY8
 ---
 
