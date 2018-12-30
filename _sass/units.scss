@@ -25,7 +25,7 @@ $gray: #a1a1a1;
 }
 
 @mixin shadow {
-  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 8px 15px 5px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 8px 15px 5px rgba(0,0,0,0.1);
+  box-shadow: 0px 8px 15px 5px rgba(0,0,0,0.1);
 }
