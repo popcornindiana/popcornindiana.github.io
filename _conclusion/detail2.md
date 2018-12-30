@@ -1,6 +1,6 @@
 ---
 title: Detail2
-name: Nutrition Facts
-link: foo
+name: Products
+link: http://www.popcornindiana.com/products/
 ---
 
