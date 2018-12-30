@@ -25,10 +25,7 @@
   position: relative;
   z-index: 500;
 
-  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-
+  @include shadow();
   @include breakpoint(small) { margin-top: $gutter; }
 }
 
@@ -42,7 +39,7 @@
   top: $gutter;
   width: auto;
   position: absolute;
-  z-index: 999;
+  z-index: 900;
 
   @include breakpoint(medium) {
     width: 100% !important;
@@ -104,10 +101,7 @@
   color: $red;
   z-index: 999;
   display: none;
-
-  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  @include shadow();
 
   @include breakpoint(medium) {
     width: 70%;
@@ -132,16 +126,42 @@
   display: none;
 }
 
+.popup__button {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: $tripleGutter;
+  height: $tripleGutter;
+  right: $gutter;
+  bottom: $gutter;
+  border-radius: 50%;
+  background-color: $gray;
+  text-align: center;
+  @include shadow();
+
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  p {
+    line-height: $tripleGutter;
+    color: $white;
+    font-size: .75rem;
+  }
+  &:hover {
+    background-color: $red;
+    cursor: pointer;
+    transform: rotate(-45deg);
+  }
+}
+
 input {
   font-size: 1rem;
   width: 100%;
   padding: $halfGutter;
   border-radius: 5px;
   font-family: 'Work Sans', sans-serif;
-
-  -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
-  box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  @include shadow();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -171,25 +191,6 @@ input {
   display: block;
   float: left;
   @include breakpoint(small) { width: 100%; }
-}
-
-.question__logos {
-  img {
-    height: auto;
-    width: 20%;
-    display: inline-block;
-    padding-right: $gutter;
-    padding: $doubleGutter 0 $gap 0;
-
-    @include breakpoint(small) {
-      width: 60%;
-      display: block;
-      padding: $gutter 0 0 0;
-    }
-  }
-  @include breakpoint(small) {
-    margin-bottom: $gap;
-  }
 }
 
 .divider {

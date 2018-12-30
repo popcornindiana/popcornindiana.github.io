@@ -10,8 +10,15 @@
 
       <div class="popup__overlay"></div>
       <div class="popup">
-        <h2>Enter to win Popcorn Indiana!</h2>
-        <input type="email" placeholder="Enter your email"></input>
+        <form method="post" target="_blank" action="https://docs.google.com/forms/d/e/1FAIpQLSfP5CoWJhzYuvs8ktnkZ1GMmX9miScHyblVvHuCA8THIg1zow/formResponse" onsubmit="hidePopup()">
+          <label>
+            <h2>Enter to win Popcorn Indiana!</h2>
+          </label>
+          <input type="email" placeholder="Enter your email" name="emailAddress" required></input>
+        </form>
+      </div>
+      <div class="popup__button" onclick="showPopup()">
+        <p>Giveaway!</p>
       </div>
 
       <header class="masthead">

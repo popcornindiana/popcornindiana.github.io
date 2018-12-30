@@ -42,11 +42,22 @@ function scrollImg(pos, counter) {
     num = 1;
   }
   if ( num > 24 && counter < 1) {
-    $('.popup__overlay').first().css('display', 'block');
-    $('.popup').first().css('display', 'block');
+    showPopup();
   }
   var newSrc = src.substring(0, src.lastIndexOf("/") + 1) + 'pop' + num + '.png';
   $('.pop__img').attr('src', newSrc);
+}
+
+function showPopup() {
+  $('.popup__overlay').first().css('display', 'block');
+  $('.popup').first().css('display', 'block');
+  $('.popup__button').css('display', 'none');
+}
+
+function hidePopup() {
+  $('.popup__overlay').first().css('display', 'none')
+  $('.popup').first().css('display', 'none');
+  $('.popup__button').css('display', 'block');
 }
 
 $('document').ready(function() {
@@ -70,10 +81,12 @@ $('document').ready(function() {
           toggleVisible(false)
         }
       }
+      if(counter >= 1) {
+        $('.question__wrapper').css('visibility', 'hidden')
+      }
     });
 
     $('.popup__overlay').first().click(function() {
-      $('.popup__overlay').first().css('display', 'none')
-      $('.popup').first().css('display', 'none');
+      hidePopup();
     });
 });
