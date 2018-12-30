@@ -55,6 +55,9 @@
     bottom: 0;
     margin: $gutter;
     color: $white;
+    p {
+      font-size: .75rem;
+    }
     @include breakpoint(medium) {
       position: relative;
       margin: 0 $gutter;
