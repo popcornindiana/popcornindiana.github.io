@@ -193,6 +193,9 @@ input {
   width: 42%;
   display: block;
   float: left;
+  a {
+    text-decoration: underline;
+  }
   @include breakpoint(small) { width: 100%; }
 }
 
