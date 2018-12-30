@@ -1,6 +1,6 @@
 ---
 title: Detail3
-name: Privacy Policy
-link: foo
+name: Contact
+link: http://www.popcornindiana.com/contact-us/
 ---
 
