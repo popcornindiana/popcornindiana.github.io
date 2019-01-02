@@ -81,9 +81,9 @@ $('document').ready(function() {
           toggleVisible(false)
         }
       }
-      if(counter >= 1) {
-        $('.question__wrapper').css('visibility', 'hidden')
-      }
+      // if(counter >= 1) {
+      //   $('.question__wrapper').css('visibility', 'hidden')
+      // }
     });
 
     $('.popup__overlay').first().click(function() {
